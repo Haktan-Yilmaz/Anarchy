@@ -7,12 +7,16 @@
 </head>
 <body>
     
-
-
 <?php
+$zijde1 = 4;
+$zijde2 = 7;
+$zijde3 = 9;
 
-$time = date("H:i")
-
+if ($zijde1 + $zijde2 > $zijde3 && $zijde1 + $zijde3 > $zijde2 && $zijde2 + $zijde3 > $zijde1) {
+    echo "Met de zijden ($zijde1, $zijde2, $zijde3) is het mogelijk om een geldige driehoek te vormen.";
+} else {
+    echo "Met de zijden ($zijde1, $zijde2, $zijde3) is het niet mogelijk om een geldige driehoek te vormen.";
+}
 ?>
 
 

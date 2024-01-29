@@ -7,12 +7,22 @@
 </head>
 <body>
     
-
-
 <?php
+$getal = 5;
 
-$time = date("H:i")
+$som = 0;
 
+echo "Optelling: ";
+for ($i = 1; $i <= $getal; $i++) {
+    $som += $i;
+
+    echo "$i";
+    if ($i < $getal) {
+        echo " + ";
+    }
+}
+
+echo " = $som";
 ?>
 
 

@@ -7,14 +7,18 @@
 </head>
 <body>
     
-
-
 <?php
 
-$time = date("H:i")
+$variabele1 = 10;
+$variabele2 = 15;
 
+$grootste_variabele = max($variabele1, $variabele2);
+
+
+$resultaat = $grootste_variabele * 2 + ($variabele1 + $variabele2 - $grootste_variabele);
+
+echo "Het resultaat is: " . $resultaat;
 ?>
-
 
 </body>
 </html>

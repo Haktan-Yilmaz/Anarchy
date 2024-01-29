@@ -7,12 +7,28 @@
 </head>
 <body>
     
-
-
 <?php
+$wisselkoersen = array(
+    'Amerikaanse dollar' => 1.21934,
+    'Britse pond' => 0.915551,
+    'Japanse Yen' => 126.226,
+    'Antilliaanse gulden' => 2.18243
+);
 
-$time = date("H:i")
+echo "<table border='1'>
+        <tr>
+            <th>Valuta</th>
+            <th>Wisselkoers (1 euro)</th>
+        </tr>";
 
+foreach ($wisselkoersen as $valuta => $koers) {
+    echo "<tr>
+            <td>$valuta</td>
+            <td>$koers</td>
+          </tr>";
+}
+
+echo "</table>";
 ?>
 
 

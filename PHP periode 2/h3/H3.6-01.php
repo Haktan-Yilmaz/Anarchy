@@ -9,43 +9,43 @@
     
 
 <?php
-Echo "Het is vandaag " . date("l d F Y");
-Echo "<br>";
-Echo "Vandaag is de " . date("z") . "e dag van het jaar";
-Echo "<br>";
+date_default_timezone_set("Europe/Amsterdam");
+$date = date ("l j F Y");
+echo "Het is vandaag: $date";
+
+echo "<br>";
+
+$day = date("z");
+echo "Vandaag is de " . date("z") . "e dag van het jaar";
+
+echo "<br>";
+
+$dayname = date ("l");
+$number = date ("w");
+echo "$dayname is de " .  $number . "e van de week";
+
+echo "<br>";
+
+$month = date ("F");
+$daycount = date ("t");
+
+echo "De maand $month heeft in totaal $daycount dagen";
+
+echo "<br>";
 
 
-  $days[1] = "Maandag";
-  $days[2] = "Dinsdag";
-  $days[3] = "Woensdag";
-  $days[4] = "Donderdag";
-  $days[5] = "Vrijdag";
-  $days[6] = "Zaterdag";
+$year = date ("Y");
+$leap = date ("L");
 
-  echo $days[2];
+echo "Het jaar " . $year . " is ";
+if($leap == 1){
+    echo "een schrikkeljaar";
+}
+else{
+    echo "geen schrikkeljaar";
+}
 
-  echo "<br>";
 
-  date_default_timezone_set("Europe/Amsterdam");
-  $today = date("j F Y");
-  echo $today;
-
-  echo "<br>";
-
-  $time = date("H:i");
-  echo "Het is nu: $time uur";
-
-  echo "<br>";
-
-  $month = date ("F");
-  $daysInMonth = date("t");
-  echo "Deze maand, $month heeft $daysInMonth dagen";
-
-  echo "<br>";
-  $week = date("W");
-  echo "Deze week is het week: $week";
-
-  $isLeapYear = (date("L", strtotime("$currentYear-01-01")) == 1) ? "wel" : "geen";
 ?>
 
 </body>

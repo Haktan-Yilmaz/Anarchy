@@ -7,14 +7,20 @@
 </head>
 <body>
     
-
-
 <?php
+$oude_prijs = 100;
 
-$time = date("H:i")
+if ($oude_prijs > 150) {
+    $nieuwe_prijs = $oude_prijs * 1.19;
+} elseif ($oude_prijs < 55) {
+    $nieuwe_prijs = $oude_prijs * 1.11; 
+} else {
+    $nieuwe_prijs = $oude_prijs * 1.16; 
+}
 
+echo "De oude prijs was €" . number_format($oude_prijs, 2, ',', '.') . ". ";
+echo "De nieuwe prijs is €" . number_format($nieuwe_prijs, 2, ',', '.') . ".";
 ?>
-
 
 </body>
 </html>

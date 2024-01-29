@@ -7,12 +7,14 @@
 </head>
 <body>
     
-
-
 <?php
+$getal = 15;
 
-$time = date("H:i")
-
+if ($getal % 2 == 0) {
+    echo "$getal is een even getal.";
+} else {
+    echo "$getal is een oneven getal.";
+}
 ?>
 
 
